@@ -1,0 +1,103 @@
+https://moodle.joinville.udesc.br/mod/vpl/forms/edit.php?id=251203&userid=1845
+TODO: Rever as assinaturas
+
+Objetivo
+
+O objetivo deste projeto é estender a funcionalidade da biblioteca DDLL (Doubly Dynamic Linked List) através da implementação da biblioteca PDDLL (Printable Doubly Dynamic Linked List). A PDDLL deve oferecer duas novas funções para impressão genérica dos elementos da lista, além das funcionalidades já presentes na DDLL.
+
+Descrição
+A biblioteca DDLL já oferece uma estrutura básica para manipulação de listas duplamente encadeadas dinâmicas, contendo funções para criação, destruição, limpeza, inserção e remoção de elementos, bem como operações adicionais como verificação de lista vazia e contagem de elementos.
+
+A PDDLL deve estender essa funcionalidade fornecendo duas novas funções:
+
+Impressão dos Elementos dos Índices Pares da Lista: A função int pOdd(pDDLL p, void (*printodd)(void *p)) deve percorrer a lista e imprimir todos os elementos posicionados em índices pares usando uma função de impressão genérica fornecida pelo usuário. O parâmetro p é um ponteiro para a lista, enquanto printodd é um ponteiro para uma função que imprime um elemento da lista.
+Impressão da Soma dos Elementos da Lista: A função int pSum(pDDLL p, int (*sumDDLL)(void *p1, void *p2), void (*printSum)(void *p)); deve somar todos os elementos na lista usando uma função de comparação fornecida pelo usuário e imprimir suas informações usando uma função de impressão genérica também fornecida pelo usuário. O parâmetro p é um ponteiro para a lista, sumDDLL é um ponteiro para uma função que compara dois elementos da lista e printSum é um ponteiro para uma função que imprime o elemento máximo. 
+
+ O usuário é responsável por implementar as funções pOdd e pSum no arquivo PDDLL.c, bem como o código do programa principal (main.c), usando as funcionalidades fornecidas pela biblioteca PDDLL.
+
+Interface da Biblioteca PDDLL
+A interface da biblioteca PDDLL consiste nas seguintes funções, que já estão disponíveis no arquivo PDDLL_pub.h:
+
+// FUNÇÕES a serem desenvolvidas.
+int pOdd(pDDLL p, void (*printodd)(void *p));
+int (*sumDDLL)(void *p1, void *p2, void (*printSum)(void *p));
+
+// Funções básicas de uma DDLL (DISPONÍVEIS)
+int cDDLL(ppDDLL pp, int sizedata);
+int dDDLL(ppDDLL pp);
+int cleanDDLL(pDDLL p);
+
+int iBegin(pDDLL p, void *element);
+int iEnd(pDDLL p, void *element);
+int iPosition(pDDLL p, int N, void *element);
+
+int rBegin(pDDLL p, void *element);
+int rEnd(pDDLL p, void *element);
+int rPosition(pDDLL p, int N, void *element);
+
+int sBegin(pDDLL p, void *element);
+int sEnd(pDDLL p, void *element);
+int sPosition(pDDLL p, int N, void *element);
+
+// Funções adicionais
+int empty(pDDLL p);
+int countElements(pDDLL p);
+
+Biblioteca PDDLL (definições internas)
+A parte interna da biblioteca PDDLL consiste nas seguintes funções, que já estão disponíveis no arquivo PDDLL_pri.h:
+
+#include "PDDLL_pub.h"
+
+#ifndef _PDDLL_priv_H_
+#define _PDDLL_priv_H_
+
+typedef struct DDLL {
+       struct NoDDLL *Begin;           // ponteiro para o primeiro nó da lista
+       struct NoDDLL *End;              // ponteiro para o último nó da lista
+       int sizedata;                            // tamanho da informação contida nos nós
+} DDLL;
+
+typedef struct NoDDLL{
+         void *dados;                              // ponteiro para os dados do nó
+         struct NoDDLL *prox;                // ponteiro para o próximo elemento
+         struct NoDDLL *ant;                  // ponteiro para o elemento anterior
+} NoDDLL;
+
+#endif
+
+Considerações Finais
+O desenvolvedor tem acesso à estrutura interna da DDLL, mas não pode modificá-la. As funções pSum e pOdd devem ser implementadas no arquivo PDDLL.c. O usuário também deve implementar o código do programa principal (main.c) utilizando as funcionalidades da biblioteca PDDLL.
+
+O projeto deve ser desenvolvido em conformidade com as boas práticas de programação, incluindo modularização, documentação adequada e tratamento de erros.
+Arquivos requeridos
+PDDLL.c
+#include "PDDLL_pri.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int pOdd(pDDLL p, void (*printodd)(void *p)){
+    return SUCESS;   
+}
+
+int pSum(pDDLL p, int (* sumDDLL)(void *p1, void *p2), void (*printSum)(void *p)) {
+    return SUCESS;
+}
+
+main.c
+#include "main.h"
+
+void myprint(void *p) {
+    // TODO
+}
+
+int comparaDados(void *dado1, void *dado2) {
+    // TODO
+}
+
+int main(int argc, char *argv[]) {
+    pDDLL lista = NULL;
+    
+    // TODO
+    
+    return 0;
+}

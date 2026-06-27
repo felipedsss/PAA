@@ -1,0 +1,154 @@
+#### ####
+     OK: GerarLib DDLL.o.
+     OK: GerarLib BST.o.
+     OK: GerarLib QDBST.o.
+       *** Lançando main enviado pelo aluno ***
+     OK: GerarExecutavel
+#### ####
+/home/p11730/vpl_evaluate.sh: line 107: 1037798 Segmentation fault      (core dumped) /usr/bin/valgrind --leak-check=full ./a.out < $1 > valgrind.out 2> valgrind.error
+     FALHA: ExecutarValgrind
+==1037798== Memcheck, a memory error detector
+==1037798== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1037798== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1037798== Command: ./a.out
+==1037798== 
+==1037798== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==1037798== 
+==1037798== Process terminating with default action of signal 11 (SIGSEGV)
+==1037798==  Access not within mapped region at address 0x1FFE801FF8
+==1037798== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==1037798==    at 0x10A37B: apagaNo (in /home/p11730/a.out)
+==1037798==  If you believe this happened as a result of a stack
+==1037798==  overflow in your program's main thread (unlikely but
+==1037798==  possible), you can try to increase the size of the
+==1037798==  main thread stack using the --main-stacksize= flag.
+==1037798==  The main thread stack size used in this run was 8388608.
+==1037798== 
+==1037798== HEAP SUMMARY:
+==1037798==     in use at exit: 67,236 bytes in 4,060 blocks
+==1037798==   total heap usage: 5,011 allocs, 951 frees, 88,340 bytes allocated
+==1037798== 
+==1037798== 1,476 bytes in 369 blocks are definitely lost in loss record 6 of 15
+==1037798==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1037798==    by 0x109716: iQDB (in /home/p11730/a.out)
+==1037798==    by 0x109356: main (in /home/p11730/a.out)
+==1037798== 
+==1037798== 19,188 (32 direct, 19,156 indirect) bytes in 1 blocks are definitely lost in loss record 14 of 15
+==1037798==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1037798==    by 0x109B6A: iBST (in /home/p11730/a.out)
+==1037798==    by 0x109779: iQDB (in /home/p11730/a.out)
+==1037798==    by 0x109356: main (in /home/p11730/a.out)
+==1037798== 
+==1037798== LEAK SUMMARY:
+==1037798==    definitely lost: 1,508 bytes in 370 blocks
+==1037798==    indirectly lost: 19,156 bytes in 1,106 blocks
+==1037798==      possibly lost: 0 bytes in 0 blocks
+==1037798==    still reachable: 46,572 bytes in 2,584 blocks
+==1037798==         suppressed: 0 bytes in 0 blocks
+==1037798== Reachable blocks (those to which a pointer was found) are not shown.
+==1037798== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==1037798== 
+==1037798== For lists of detected and suppressed errors, rerun with: -s
+==1037798== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+#### ####
+      *** Lançando main de verificação 1 ***
+     OK: GerarExecutavel
+#### ####
+/home/p11730/vpl_evaluate.sh: line 89: 1037808 Segmentation fault      (core dumped) ./a.out < $1 > output.prog
+     OK: VerificarResultadoFinal
+#### ####
+/home/p11730/vpl_evaluate.sh: line 107: 1037813 Segmentation fault      (core dumped) /usr/bin/valgrind --leak-check=full ./a.out < $1 > valgrind.out 2> valgrind.error
+     FALHA: ExecutarValgrind
+==1037813== Memcheck, a memory error detector
+==1037813== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1037813== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1037813== Command: ./a.out
+==1037813== 
+==1037813== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==1037813== 
+==1037813== Process terminating with default action of signal 11 (SIGSEGV)
+==1037813==  Access not within mapped region at address 0x1FFE801FF8
+==1037813== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==1037813==    at 0x10A380: apagaNo (in /home/p11730/a.out)
+==1037813==  If you believe this happened as a result of a stack
+==1037813==  overflow in your program's main thread (unlikely but
+==1037813==  possible), you can try to increase the size of the
+==1037813==  main thread stack using the --main-stacksize= flag.
+==1037813==  The main thread stack size used in this run was 8388608.
+==1037813== 
+==1037813== HEAP SUMMARY:
+==1037813==     in use at exit: 67,236 bytes in 4,060 blocks
+==1037813==   total heap usage: 5,011 allocs, 951 frees, 88,340 bytes allocated
+==1037813== 
+==1037813== 1,476 bytes in 369 blocks are definitely lost in loss record 6 of 15
+==1037813==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1037813==    by 0x10971B: iQDB (in /home/p11730/a.out)
+==1037813==    by 0x109356: main (in /home/p11730/a.out)
+==1037813== 
+==1037813== 19,188 (32 direct, 19,156 indirect) bytes in 1 blocks are definitely lost in loss record 14 of 15
+==1037813==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1037813==    by 0x109B6F: iBST (in /home/p11730/a.out)
+==1037813==    by 0x10977E: iQDB (in /home/p11730/a.out)
+==1037813==    by 0x109356: main (in /home/p11730/a.out)
+==1037813== 
+==1037813== LEAK SUMMARY:
+==1037813==    definitely lost: 1,508 bytes in 370 blocks
+==1037813==    indirectly lost: 19,156 bytes in 1,106 blocks
+==1037813==      possibly lost: 0 bytes in 0 blocks
+==1037813==    still reachable: 46,572 bytes in 2,584 blocks
+==1037813==         suppressed: 0 bytes in 0 blocks
+==1037813== Reachable blocks (those to which a pointer was found) are not shown.
+==1037813== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==1037813== 
+==1037813== For lists of detected and suppressed errors, rerun with: -s
+==1037813== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+#### ####
+      *** Lançando main de verificação 2 ***
+     OK: GerarExecutavel
+#### ####
+/home/p11730/vpl_evaluate.sh: line 107: 1047823 Segmentation fault      (core dumped) /usr/bin/valgrind --leak-check=full ./a.out < $1 > valgrind.out 2> valgrind.error
+     FALHA: ExecutarValgrind
+==1047823== Memcheck, a memory error detector
+==1047823== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1047823== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1047823== Command: ./a.out
+==1047823== 
+==1047823== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==1047823== 
+==1047823== Process terminating with default action of signal 11 (SIGSEGV)
+==1047823==  Access not within mapped region at address 0x1FFE801FF8
+==1047823== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==1047823==    at 0x10A88F: apagaNo (in /home/p11730/a.out)
+==1047823==  If you believe this happened as a result of a stack
+==1047823==  overflow in your program's main thread (unlikely but
+==1047823==  possible), you can try to increase the size of the
+==1047823==  main thread stack using the --main-stacksize= flag.
+==1047823==  The main thread stack size used in this run was 8388608.
+==1047823== 
+==1047823== HEAP SUMMARY:
+==1047823==     in use at exit: 1,445,260 bytes in 34,826 blocks
+==1047823==   total heap usage: 60,015 allocs, 25,189 frees, 2,929,692 bytes allocated
+==1047823== 
+==1047823== 2,496 (32 direct, 2,464 indirect) bytes in 1 blocks are definitely lost in loss record 7 of 15
+==1047823==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1047823==    by 0x10A068: iBST (in /home/p11730/a.out)
+==1047823==    by 0x109C77: iQDB (in /home/p11730/a.out)
+==1047823==    by 0x1096F8: main (in /home/p11730/a.out)
+==1047823== 
+==1047823== 656,208 bytes in 6,076 blocks are definitely lost in loss record 15 of 15
+==1047823==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1047823==    by 0x109C14: iQDB (in /home/p11730/a.out)
+==1047823==    by 0x1096F8: main (in /home/p11730/a.out)
+==1047823== 
+==1047823== LEAK SUMMARY:
+==1047823==    definitely lost: 656,240 bytes in 6,077 blocks
+==1047823==    indirectly lost: 2,464 bytes in 47 blocks
+==1047823==      possibly lost: 0 bytes in 0 blocks
+==1047823==    still reachable: 786,556 bytes in 28,702 blocks
+==1047823==         suppressed: 0 bytes in 0 blocks
+==1047823== Reachable blocks (those to which a pointer was found) are not shown.
+==1047823== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==1047823== 
+==1047823== For lists of detected and suppressed errors, rerun with: -s
+==1047823== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+#### ####

@@ -1,0 +1,2010 @@
+#### ####
+     OK: VerificarArquivo (main1.c)
+     OK: VerificarArquivo (main.h)
+     OK: VerificarArquivo (BST.c)
+     OK: VerificarArquivo (BST_pri.h)
+     OK: VerificarArquivo (BST_pub.h)
+#### ####
+     OK: VerificaInclude (main1.c)
+     OK: VerificaInclude (main.h)
+     OK: VerificaInclude (BST_pri.h)
+     OK: VerificaInclude (BST.c)
+#### ####
+      *** Lançando main de verificação 1 ***
+     OK: GerarExecutavel
+#### ####
+     FALHA: VerificarResultadoFinal
+#### ####
+     FALHA: ExecutarValgrind
+==449572== Memcheck, a memory error detector
+==449572== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==449572== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==449572== Command: ./a.out
+==449572== 
+==449572== Conditional jump or move depends on uninitialised value(s)
+==449572==    at 0x1096A7: cBST (in /home/p10142/a.out)
+==449572==    by 0x109352: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a980d8 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b008 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b010 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b0b8 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b0c0 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b0b0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b0b0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b110 is 0 bytes inside a block of size 4 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x10985B: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b0b0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b000 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b000 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b060 is 0 bytes inside a block of size 4 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x10985B: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b000 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a980e0 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a991c8 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9af58 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9af60 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9af50 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9af50 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9afb0 is 0 bytes inside a block of size 4 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x10985B: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9af50 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a991d0 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99278 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99280 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99328 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9ab38 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b218 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b220 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b210 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b210 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b270 is 0 bytes inside a block of size 4 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x10985B: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b210 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9ab40 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9adf8 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b168 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b170 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b160 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9b160 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9ae00 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9aea8 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9aeb0 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9aea0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9aea0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9af00 is 0 bytes inside a block of size 4 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x10985B: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9aea0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9adf0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9adf0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9ab30 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a9ab30 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99330 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109777: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99a08 is 8 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109787: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99a10 is 16 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==  Address 0x4a9b2c0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==  Address 0x4a9b2c0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99a00 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99a00 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109782: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99270 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99270 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a991c0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a991c0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a99220 is 0 bytes inside a block of size 4 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x10985B: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a991c0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x109792: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x109797: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a980d0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid read of size 8
+==449572==    at 0x1097A3: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a980d0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a98130 is 0 bytes inside a block of size 4 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097AD: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x10985B: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x109740: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x4a980d0 is 0 bytes inside a block of size 24 free'd
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1097B9: cleanNode (in /home/p10142/a.out)
+==449572==    by 0x1097ED: cleanBST (in /home/p10142/a.out)
+==449572==    by 0x10960E: main (in /home/p10142/a.out)
+==449572==  Block was alloc'd at
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x109835: iBST (in /home/p10142/a.out)
+==449572==    by 0x1093B0: main (in /home/p10142/a.out)
+==449572== 
+==449572== Invalid free() / delete / delete[] / realloc()
+==449572==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x10974C: dBST (in /home/p10142/a.out)
+==449572==    by 0x10966E: main (in /home/p10142/a.out)
+==449572==  Address 0x1fff000738 is on thread 1's stack
+==449572==  in frame #2, created by main (???:)
+==449572== 
+==449572== 
+==449572== HEAP SUMMARY:
+==449572==     in use at exit: 16 bytes in 1 blocks
+==449572==   total heap usage: 107 allocs, 189 frees, 9,664 bytes allocated
+==449572== 
+==449572== 16 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==449572==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449572==    by 0x1096B9: cBST (in /home/p10142/a.out)
+==449572==    by 0x109352: main (in /home/p10142/a.out)
+==449572== 
+==449572== LEAK SUMMARY:
+==449572==    definitely lost: 16 bytes in 1 blocks
+==449572==    indirectly lost: 0 bytes in 0 blocks
+==449572==      possibly lost: 0 bytes in 0 blocks
+==449572==    still reachable: 0 bytes in 0 blocks
+==449572==         suppressed: 0 bytes in 0 blocks
+==449572== 
+==449572== Use --track-origins=yes to see where uninitialised values come from
+==449572== For lists of detected and suppressed errors, rerun with: -s
+==449572== ERROR SUMMARY: 249 errors from 69 contexts (suppressed: 0 from 0)
+#### ####
+       *** Lançando main enviado pelo aluno ***
+     OK: GerarExecutavel
+#### ####
+     FALHA: ExecutarValgrind
+==449585== Memcheck, a memory error detector
+==449585== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==449585== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==449585== Command: ./a.out
+==449585== 
+==449585== 
+==449585== HEAP SUMMARY:
+==449585==     in use at exit: 16 bytes in 1 blocks
+==449585==   total heap usage: 15 allocs, 14 frees, 8,376 bytes allocated
+==449585== 
+==449585== 16 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==449585==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449585==    by 0x109521: cBST (in /home/p10142/a.out)
+==449585==    by 0x10930C: main (in /home/p10142/a.out)
+==449585== 
+==449585== LEAK SUMMARY:
+==449585==    definitely lost: 16 bytes in 1 blocks
+==449585==    indirectly lost: 0 bytes in 0 blocks
+==449585==      possibly lost: 0 bytes in 0 blocks
+==449585==    still reachable: 0 bytes in 0 blocks
+==449585==         suppressed: 0 bytes in 0 blocks
+==449585== 
+==449585== For lists of detected and suppressed errors, rerun with: -s
+==449585== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#### ####
+      *** Lançando main2 de verificação 2 ***
+     OK: GerarExecutavel
+#### ####
+     FALHA: ExecutarValgrind
+==449599== Memcheck, a memory error detector
+==449599== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==449599== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==449599== Command: ./a.out
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099C4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99118 is 8 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099D4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99120 is 16 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099C4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99228 is 8 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099D4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99230 is 16 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099C4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99338 is 8 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099D4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99340 is 16 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099C4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99448 is 8 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099D4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99450 is 16 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099E4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==  Address 0x4aa0c50 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099F0: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==  Address 0x4aa0c50 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid free() / delete / delete[] / realloc()
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x1099FA: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==  Address 0x4aa0cb0 is 0 bytes inside a block of size 104 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x1099FA: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109AA8: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid free() / delete / delete[] / realloc()
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==  Address 0x4aa0c50 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099E4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99330 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099F0: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99330 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099E4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99220 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099F0: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99220 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid free() / delete / delete[] / realloc()
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x1099FA: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99280 is 0 bytes inside a block of size 104 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x1099FA: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109AA8: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid free() / delete / delete[] / realloc()
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99220 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x1099DF: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099E4: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99110 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid read of size 8
+==449599==    at 0x1099F0: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99110 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid free() / delete / delete[] / realloc()
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x1099FA: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99170 is 0 bytes inside a block of size 104 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x1099FA: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109AA8: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid free() / delete / delete[] / realloc()
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x10998D: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x4a99110 is 0 bytes inside a block of size 24 free'd
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A06: cleanNode (in /home/p10142/a.out)
+==449599==    by 0x109A3A: cleanBST (in /home/p10142/a.out)
+==449599==    by 0x109855: main (in /home/p10142/a.out)
+==449599==  Block was alloc'd at
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109A82: iBST (in /home/p10142/a.out)
+==449599==    by 0x1095A7: main (in /home/p10142/a.out)
+==449599== 
+==449599== Invalid free() / delete / delete[] / realloc()
+==449599==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109999: dBST (in /home/p10142/a.out)
+==449599==    by 0x1098BB: main (in /home/p10142/a.out)
+==449599==  Address 0x1fff0006c8 is on thread 1's stack
+==449599==  in frame #2, created by main (???:)
+==449599== 
+==449599== 
+==449599== HEAP SUMMARY:
+==449599==     in use at exit: 16 bytes in 1 blocks
+==449599==   total heap usage: 237 allocs, 467 frees, 23,184 bytes allocated
+==449599== 
+==449599== 16 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==449599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==449599==    by 0x109906: cBST (in /home/p10142/a.out)
+==449599==    by 0x109516: main (in /home/p10142/a.out)
+==449599== 
+==449599== LEAK SUMMARY:
+==449599==    definitely lost: 16 bytes in 1 blocks
+==449599==    indirectly lost: 0 bytes in 0 blocks
+==449599==      possibly lost: 0 bytes in 0 blocks
+==449599==    still reachable: 0 bytes in 0 blocks
+==449599==         suppressed: 0 bytes in 0 blocks
+==449599== 
+==449599== For lists of detected and suppressed errors, rerun with: -s
+==449599== ERROR SUMMARY: 692 errors from 24 contexts (suppressed: 0 from 0)
+#### ####

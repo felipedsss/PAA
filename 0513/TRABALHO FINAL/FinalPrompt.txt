@@ -1,0 +1,815 @@
+Estou desenvolvendo o trabalho abaixo e estou tendo dificuldades. Ele compila, roda de forma satisfatória mas apresenta vazamento de memória. Tenho apenas mais uma chance para entregar.
+Segue abaixo a descrição do trabalho, minha implementação e a saída do Valgrind a respeito do meu main, do main 1 do professor e do main 2 do professor.
+Descrição da Biblioteca QDB - Queue DDLL BST
+
+A biblioteca QDB é uma implementação que combina uma Queue Dynamic (QD), uma Dynamic Doubly Linked List (DDLL) e uma Binary Search Tree (BST) para fornecer uma estrutura de dados eficiente para armazenar e gerenciar índices e dados associados. A QDB é projetada para ser flexível, eficiente em termos de espaço e tempo, e fácil de usar, permitindo a inserção, busca, remoção e impressão de elementos de forma rápida e eficiente. A Figura 1 ilustra um exemplo de dados armazenados na QDB.
+
+Componentes da Biblioteca:
+
+Queue Dynamic (QD): A QD é uma estrutura de fila dinâmica que armazena índices gerados aleatoriamente. Esta estrutura é implementada usando a Dynamic Doubly Linked List (DDLL) para permitir inserção e remoção eficientes tanto no início quanto no final da fila.
+
+Interfaces Públicas da DDLL (DISPONÍVEL PARA USO):
+
+int cDDLL(ppDDLL pp, int sizedata): Cria uma DDLL, alocando memória e inicializando as estruturas necessárias.
+int dDDLL(ppDDLL pp): Destroi a DDLL, liberando toda a memória alocada para suas estruturas internas.
+int cleanDDLL(pDDLL p): Limpa a DDLL, removendo todos os elementos, mas mantendo a estrutura intacta.
+int iBegin(pDDLL p, void *element): Insere um novo elemento no início da DDLL.
+int iEnd(pDDLL p, void *element): Insere um novo elemento no final da DDLL.
+int iPosition(pDDLL p, int N, void *element): Insere um novo elemento em uma posição específica da DDLL.
+int rBegin(pDDLL p, void *element): Remove o elemento no início da DDLL.
+int rEnd(pDDLL p, void *element): Remove o elemento no final da DDLL.
+int rPosition(pDDLL p, int N, void *element): Remove o elemento em uma posição específica da DDLL.
+int sBegin(pDDLL p, void *element): Busca o elemento no início da DDLL.
+int sEnd(pDDLL p, void *element): Busca o elemento no final da DDLL.
+int sPosition(pDDLL p, int N, void *element): Busca o elemento em uma posição específica da DDLL.
+int empty(pDDLL p): Verifica se a DDLL está vazia.
+int countElements(pDDLL p): Conta o número de elementos na DDLL.
+Binary Search Tree (BST): A BST é utilizada para armazenar os índices como chaves de busca associadas aos dados fornecidos pelo usuário. Isso permite uma busca eficiente dos dados associados aos índices, garantindo um desempenho rápido e eficiente.
+
+Interfaces Públicas da BST (DISPONÍVEL PARA USO):
+
+int cBST(ppBST pp, int sizedata): Cria uma BST, alocando memória e inicializando as estruturas necessárias.
+int dBST(ppBST pp): Destroi a BST, liberando toda a memória alocada para suas estruturas internas.
+int cleanBST(pBST p): Limpa a BST, removendo todos os elementos, mas mantendo a estrutura intacta.
+int iBST(pBST p, void *new, int (* cmp)(void *p1, void *p2)): Insere um novo elemento na BST.
+int rBST(pBST p, void *item, int (* cmp)(void *p1, void *p2)): Remove um elemento da BST.
+int sBST(pBST p, void *item, int (* cmp)(void *p1, void *p2)): Busca um elemento na BST.
+int emptyBST(pBST p): Verifica se a BST está vazia.
+int orderPath(pBST pa, void (* process)(void *p)): Percorre a BST em ordem e aplica uma função de processo a cada nó.
+int preorderPath(pBST pa, void (* process)(void *p)): Percorre a BST em pré-ordem e aplica uma função de processo a cada nó.
+int postorderPath(pBST pa, void (* process)(void *p)): Percorre a BST em pós-ordem e aplica uma função de processo a cada nó.
+Funções Públicas da QDB:
+(Biblioteca a ser totalmente implementada)
+
+int cQDB(ppQDB pp, int sizedata): Esta função é responsável por criar a QDB, alocando memória e inicializando todas as estruturas necessárias. O parâmetro pp é um ponteiro para um ponteiro para a QDB, que será inicializado por esta função. sizedata especifica o tamanho dos dados que serão armazenados na QDB.
+
+int dQDB(ppQDB pp): Esta função destroi a QDB, liberando toda a memória alocada para suas estruturas internas. O parâmetro pp é um ponteiro para um ponteiro para a QDB que será destruída.
+
+int iQDB(pQDB p, void *new): Esta função insere um novo elemento na QDB. O parâmetro p é um ponteiro para a QDB, e new é um ponteiro para os dados que serão inseridos na QDB.
+
+int sQDB(pQDB p, void *new): Esta função busca um elemento na QDB com base no índice fornecido. O parâmetro p é um ponteiro para a QDB, e new é um ponteiro para os dados associados ao índice a ser buscado.
+
+int rQDB(pQDB p, void *new): Esta função remove um elemento da QDB com base no índice fornecido. O parâmetro p é um ponteiro para a QDB, e new é um ponteiro para os dados associados ao índice a ser removido.
+
+int prQDB(pQDB p, void (*printall)(void *p)): Esta função imprime todos os elementos armazenados na QDB. O parâmetro p é um ponteiro para a QDB, e printall é um ponteiro para uma função de impressão que será aplicada a cada elemento da QDB para imprimir seus dados.
+
+
+Dicas:
+
+Estrutura Descritora da QDB:
+
+A QDB é uma estrutura descritora que encapsula uma Queue Dynamic (QD), baseada na Dynamic Doubly Linked List (DDLL), e uma Binary Search Tree (BST). 
+Armazenamento de Dados:
+
+Os dados recebidos do usuário serão encapsulados em um pacote que inclui a chave (índice) e os dados propriamente ditos. Esses pacotes serão armazenados na BST.
+Além disso, o índice também será armazenado na QD, seguindo as regras de uma fila clássica, nas quais a inserção ocorre no final e a remoção ou busca no início.
+Acesso aos Dados na BST:
+
+Para acessar os dados armazenados na BST, siga as regras da QD. Isso significa que as funções sQDB e rQDB devem remover ou buscar o dado no início da QD para, em seguida, encontrar a chave correspondente na BST e, por fim, retornar o dado original do usuário.
+Impressão por Ordem de Chave na BST:
+
+Utilize a função orderPath da BST para imprimir os dados em ordem de chave. Essa função requer uma função de impressão como parâmetro, já que a estrutura BST desconhece o formato dos dados armazenados.
+A função de impressão deve ser definida na aplicação, pois somente ela conhece o formato dos dados. No entanto, lembre-se de que os dados armazenados na BST não consistem puramente nos dados recebidos pelo usuário, pois a QDB acrescenta o índice (chave) ao pacote armazenado.
+Declaração de Ponteiro para Função:
+
+Considere declarar um ponteiro para a função recebida do usuário no QDB_priv. Isso permitirá que a biblioteca QDB desempacote o dado recebido da BST, removendo a chave e, posteriormente, chame a função de impressão do próprio usuário com o dado original.
+Bibliotecas disponíveis (DDLL e BST):
+Observe o arquivo QDB_priv.h que já inclui as interfaces da funções das bibliotecas DDLL e BST além dos ponteiros para os descritos das referidas bibliotecas.
+
+Saída de teste: 
+O código do programa main.c foi utilizado na íntegra para gerar a saída a seguir. As bibliotecas DDLL e BST disponíveis foram testadas e, assim como o main.c, não apresentaram nenhum erro quando submetidas as valgrind.
+Os arquivos maintest.c e app-func.zip foram utilizados para a elaboração da versão QDB do professor (gabarito). Eles podem servir para aprendizado de manipulação dos ponteiros para o empacotamento da chave + dado e de chamada de função como parâmetro.
+ 
+
+
+
+Arquivos requeridos inicialmente
+QDBST.c
+#include "QDBST_pri.h"
+main.c
+#include "QDBST_pub.h"
+#include <stdio.h>
+
+
+void printInt (void *myNode) {
+    int * p = NULL;
+
+    p = (int *) myNode;
+    printf("\t(%i)", *p);
+}
+
+
+int main(int argc, char *argv[]) {
+    pQDB qdb = NULL;
+    int intput=0;
+    int intret=0;
+
+    
+    // Criação da QDB
+    printf("\n\t**** Criação ****\n");
+    if (cQDB(&qdb,sizeof(int))) {
+    		printf("    FAIL: Erro ao criar a QDB.\n");
+	} else 
+	    printf("    OK : QDB criada com SUCESSO.\n");
+
+    // Leitura/Inserção da QDB
+    printf("\n\t**** INSERCAO ****\n");
+    while (1) {
+        if (!fscanf(stdin, "%d", &intput)) 
+            break;
+        intput += 10000;
+
+		if(iQDB(qdb, &intput) == SUCCESS){
+			printf("    OK :inserido com SUCESSO(%d).\n",intput);
+		}else{
+			printf("    FAIL: falha na insercao.\n");
+		}
+        
+
+    }
+    printf("\n\t**** Impressão (Ordem) ****\n");        
+    prQDB(qdb, printInt);
+    printf("\n");
+
+    // Busca da QDB
+    printf("\n\t**** BUSCA ****\n");
+    for (int i=0; i < 4; i++) {
+        if (sQDB(qdb, &intret) == SUCCESS) {
+    	    printf("    OK :buscado com SUCESSO(%d).\n",intret);        
+        }
+    }
+    printf("\n");
+    
+    // Remoção da QDB
+    printf("\n\t**** REMOCAO ****\n");
+    for (int i=0; i < 4; i++)
+        if (rQDB(qdb, &intret) == SUCCESS) {
+                printf("    OK : removido com SUCESSO(%d).\n",intret);        
+        }
+
+    printf("\n\t**** Impressão (Ordem) ****\n");        
+    prQDB(qdb, printInt);
+    printf("\n");
+        
+    
+    printf("\n\t**** Destruição ****\n");
+    if (dQDB(&qdb)) {
+    		printf("    FAIL: Erro ao destroir a QDB.\n");
+	} else 
+	    printf("    OK : QDB destruida com SUCESSO.\n");
+    
+    return 0;
+}
+QDBST_pub.h
+#ifndef _QDDLLBST_INTERFACE_H_
+#define _QDDLLBST_INTERFACE_H_
+
+#define SUCCESS 0
+#define FAIL 1
+
+typedef struct QDBST *pQDB, **ppQDB;
+
+int cQDB(ppQDB pp, int sizedata);             // cria a QDB
+int dQDB(ppQDB pp);                           // destroi a QDB
+int iQDB(pQDB p, void *new);                  // insere na QDB
+int sQDB(pQDB p, void *new);                  // busca na QDB
+int rQDB(pQDB p, void *new);                  // remove na QDB
+int prQDB(pQDB p, void (*printall)(void *p)); // imprime a QDB
+#endif
+QDBST_pri.h
+#ifndef _BST_PRIVADO_H_
+#define _BST_PRIVADO_H_
+
+#include "BST_pub.h"
+#include "DDLL_pub.h"
+#include <string.h>
+#include <stdio.h>
+
+typedef struct QDBST{
+   // TODO
+}QDBST;
+
+#endif
+
+
+MINHA IMPLEMENTAÇÃO
+
+QDBST.C
+#include <stdlib.h>
+#include <string.h>
+#include "QDBST_pri.h"
+
+
+// Comparação de nós da QDB
+int compareQDBNode(void *p1, void *p2) {
+    pacote *a = (pacote *)p1;
+    pacote *b = (pacote *)p2;
+    if (a->index < b->index) return -1;
+    if (a->index > b->index) return 1;
+    return 0;
+}
+
+// Criação da QDB
+int cQDB(ppQDB pp, int sizedata) {
+    (*pp) = (pQDB)malloc(sizeof(QDBST));
+    if (*pp == NULL)
+        return FAIL;
+    
+    (*pp)->sizedata = sizedata;
+
+    if (cDDLL(&(*pp)->qd, sizeof(int)) != SUCCESS) {
+        free(*pp);
+        return FAIL;
+    }
+    (*pp)->bst = NULL;
+    if (cBST(&(*pp)->bst, sizeof(pacote)) != SUCCESS) {
+        dDDLL(&(*pp)->qd);
+        free(*pp);
+        return FAIL;
+    }
+
+    return SUCCESS;
+}
+
+// Destruição da QDB
+int dQDB(ppQDB pp) {
+    if (pp == NULL || *pp == NULL)
+        return FAIL;
+
+    //limpar todos os dados alocados no pacote na função iBST
+    int intret;
+    while (rQDB((*pp), &intret) == SUCCESS) {
+        continue;
+    }
+    //remover a árvore e a fila DDLL em seguida
+    dBST(&(*pp)->bst);
+    dDDLL(&(*pp)->qd);
+    free(*pp);
+    *pp = NULL;
+    return SUCCESS;
+}
+
+// Inserção na QDB
+int iQDB(pQDB p, void *new) {
+    if (p == NULL || new == NULL)
+        return FAIL;
+    int index = rand();
+    if (iEnd(p->qd, &index) != SUCCESS) {
+        return FAIL;
+    }
+    //Criar pacote com memória alocada para receber os dados
+    pacote newPacote;
+    newPacote.index = index;
+    newPacote.data = (void *)malloc(p->sizedata);
+    memcpy(newPacote.data, new, p->sizedata);
+       
+
+    if (iBST(p->bst, &newPacote, compareQDBNode) != SUCCESS) {
+        free(newPacote.data);
+        rEnd(p->qd, NULL);  // Removing the index from the queue
+        return FAIL;
+    }
+
+    return SUCCESS;
+}
+
+// Busca na QDB
+int sQDB(pQDB p, void *new) {
+    if (p == NULL || new == NULL) {
+        fprintf(stderr, "sQDB: Invalid input pointers.\n");
+        return FAIL;
+    }
+    
+    //Encontrar o índice no elemento inicial da fila
+    int index;
+
+    if (sBegin(p->qd, &index) != SUCCESS) {
+        return FAIL;
+    }
+    //Criar um pacote com o índice encontrado, ele receberá os dados do respectivo nó na BST
+    pacote buscaPacote;
+    buscaPacote.index = index;
+
+    //Encontrar o pacote no BST que possui o índice encontrado
+    if (sBST(p->bst, &buscaPacote, compareQDBNode) != SUCCESS) {
+        return FAIL;
+    }
+    
+    memcpy(new, buscaPacote.data, p->sizedata);
+    return SUCCESS;
+}
+
+// Remoção da QDB
+int rQDB(pQDB p, void *new) {
+    if (p == NULL || new == NULL) {
+        fprintf(stderr, "rQDB: p or new is NULL.\n");
+        return FAIL;
+    }
+
+    int index;
+    if (rBegin(p->qd, &index) != SUCCESS) {
+        return FAIL;
+    }
+    
+    pacote buscaPacote;
+    buscaPacote.index = index;
+
+    if (rBST(p->bst, &buscaPacote, compareQDBNode) != SUCCESS) {
+        fprintf(stderr, "rQDB: rBST failed.\n");
+        return FAIL;
+    }
+    
+    memcpy(new, buscaPacote.data, p->sizedata);
+    free(buscaPacote.data);
+    return SUCCESS;
+}
+
+// Impressão da QDB
+int prQDB(pQDB p, void (*printall)(void *p)) {
+    printf("[Index]\t(User data)\n");
+
+    if (p == NULL || printall == NULL)
+        return FAIL;
+
+    return orderPath(p->bst, printall);
+}
+
+main.c
+#include "QDBST_pub.h"
+#include "QDBST_pri.h"
+#include <stdio.h>
+void printInt (void *myNode) {
+    if (myNode != NULL){
+    pacote *printPacote = ( pacote *)(myNode);
+    int index = printPacote->index;
+    int data = -800;
+    if (printPacote->data != NULL){
+        void *pacoteData = printPacote->data;
+        data = *(int *)pacoteData;
+        printf("[%d]\t(%d)\n", index, data);}
+        }
+    
+}
+
+
+int main(int argc, char *argv[]) {
+    pQDB qdb = NULL;
+    int intput=0;
+    int intret=0;
+
+    // Criação da QDB
+    printf("\n\t**** Criação ****\n");
+    if (cQDB(&qdb,sizeof(int)) == FAIL) {
+        printf("    FAIL: Erro ao criar a QDB.\n");
+    } else {
+        printf("    OK : QDB criada com SUCESSO.\n");
+    }
+    
+    // Leitura/Inserção da QDB
+    printf("\n\t**** INSERCAO ****\n");
+    while (1) {
+        if (!fscanf(stdin, "%d", &intput))
+            break;
+        intput += 10000;
+
+        if(iQDB(qdb, &intput) == SUCCESS) {
+            printf("    OK : inserido com SUCESSO(%d).\n", intput);
+        } else {
+            printf("    FAIL: falha na insercao.\n");
+        }
+        if (intput > 110000)
+            break;
+    }
+   
+    // Busca da QDB
+    printf("\n\t**** BUSCA ****\n");
+    for (int i=0; i < 4; i++) {
+        if (sQDB(qdb, &intret) == SUCCESS) {
+            printf("    OK : buscado com SUCESSO(%d).\n", intret);
+        }
+    }
+
+    // Remoção da QDB
+    printf("\n\t**** REMOCAO ****\n");
+    for (int i=0; i < 4; i++) {
+        if (rQDB(qdb, &intret) == SUCCESS) {
+            printf("    OK : removido com SUCESSO(%d).\n", intret);
+        }
+    }
+
+    // Impressão da QDB
+    printf("\n\t**** Impressão (Ordem) ****\n");
+    prQDB(qdb, printInt);
+   
+    // Destruição da QDB
+    printf("\n\t**** Destruição ****\n");
+    if (dQDB(&qdb)) {
+        printf("    FAIL: Erro ao destroir a QDB.\n");
+    } else {
+        printf("    OK : QDB destruida com SUCESSO.\n");
+    }
+
+    return 0;
+}
+
+QDBST_pub.C
+#ifndef _QDDLLBST_INTERFACE_H_
+#define _QDDLLBST_INTERFACE_H_
+
+#define SUCCESS 0
+#define FAIL 1
+
+typedef struct QDBST *pQDB, **ppQDB;
+
+int cQDB(ppQDB pp, int sizedata);             // cria a QDB
+int dQDB(ppQDB pp);                           // destroi a QDB
+int iQDB(pQDB p, void *new);                  // insere na QDB
+int sQDB(pQDB p, void *new);                  // busca na QDB
+int rQDB(pQDB p, void *new);                  // remove na QDB
+int prQDB(pQDB p, void (*printall)(void *p)); // imprime a QDB
+#endif
+
+QDBST_pri.h
+
+#ifndef _QDBST_PRIVADO_H_
+#define _QDBST_PRIVADO_H_
+#include "QDBST_pub.h"
+#include "BST_pub.h"
+#include "DDLL_pub.h"
+#include <string.h>
+#include <stdio.h>
+
+typedef struct pacote {
+    int index;
+    void *data;
+} pacote;
+
+typedef struct QDBST {
+    pDDLL qd;
+    pBST bst;
+    int sizedata;
+} QDBST;
+
+
+
+#endif
+
+SAÍDA DO Valgrind
+Observações:
+O primeiro main de verificação é relacionado ao meu próprio main; o primeiro main do professor é mais simples e o segundo usa estruturas de dados mais complexas; 
+A função ApagaNo parece estar relacionada a alguma função publica do professor, não fica visível para mim;
+Há um vazamento de memória detectado, parece estar faltando algum free;
+Os dados são genéricos, por isso não estão sendo alocados corretamente (gerando invalid read mais tarde)
+Segue abaixo a saída do valgrind:
+
+
+
+#### ####
+     OK: GerarLib DDLL.o.
+     OK: GerarLib BST.o.
+     OK: GerarLib QDBST.o.
+       *** Lançando main enviado pelo aluno ***
+     OK: GerarExecutavel
+#### ####
+/home/p10508/vpl_evaluate.sh: line 107: 307051 Segmentation fault      (core dumped) /usr/bin/valgrind --leak-check=full ./a.out < $1 > valgrind.out 2> valgrind.error
+     FALHA: ExecutarValgrind
+==307051== Memcheck, a memory error detector
+==307051== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==307051== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==307051== Command: ./a.out
+==307051== 
+rQDB: rBST failed.
+==307051== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==307051== 
+==307051== Process terminating with default action of signal 11 (SIGSEGV)
+==307051==  Access not within mapped region at address 0x1FFE801FF8
+==307051== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==307051==    at 0x10A33B: apagaNo (in /home/p10508/a.out)
+==307051==  If you believe this happened as a result of a stack
+==307051==  overflow in your program's main thread (unlikely but
+==307051==  possible), you can try to increase the size of the
+==307051==  main thread stack using the --main-stacksize= flag.
+==307051==  The main thread stack size used in this run was 8388608.
+==307051== 
+==307051== HEAP SUMMARY:
+==307051==     in use at exit: 67,236 bytes in 4,060 blocks
+==307051==   total heap usage: 5,010 allocs, 950 frees, 88,336 bytes allocated
+==307051== 
+==307051== 1,476 bytes in 369 blocks are definitely lost in loss record 6 of 15
+==307051==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==307051==    by 0x109736: iQDB (in /home/p10508/a.out)
+==307051==    by 0x109388: main (in /home/p10508/a.out)
+==307051== 
+==307051== 19,188 (32 direct, 19,156 indirect) bytes in 1 blocks are definitely lost in loss record 14 of 15
+==307051==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==307051==    by 0x109B2A: iBST (in /home/p10508/a.out)
+==307051==    by 0x109775: iQDB (in /home/p10508/a.out)
+==307051==    by 0x109388: main (in /home/p10508/a.out)
+==307051== 
+==307051== LEAK SUMMARY:
+==307051==    definitely lost: 1,508 bytes in 370 blocks
+==307051==    indirectly lost: 19,156 bytes in 1,106 blocks
+==307051==      possibly lost: 0 bytes in 0 blocks
+==307051==    still reachable: 46,572 bytes in 2,584 blocks
+==307051==         suppressed: 0 bytes in 0 blocks
+==307051== Reachable blocks (those to which a pointer was found) are not shown.
+==307051== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==307051== 
+==307051== For lists of detected and suppressed errors, rerun with: -s
+==307051== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+#### ####
+      *** Lançando main de verificação 1 ***
+     OK: GerarExecutavel
+#### ####
+rQDB: rBST failed.
+/home/p10508/vpl_evaluate.sh: line 89: 307061 Segmentation fault      (core dumped) ./a.out < $1 > output.prog
+     OK: VerificarResultadoFinal
+#### ####
+/home/p10508/vpl_evaluate.sh: line 107: 307066 Segmentation fault      (core dumped) /usr/bin/valgrind --leak-check=full ./a.out < $1 > valgrind.out 2> valgrind.error
+     FALHA: ExecutarValgrind
+==307066== Memcheck, a memory error detector
+==307066== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==307066== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==307066== Command: ./a.out
+==307066== 
+rQDB: rBST failed.
+==307066== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==307066== 
+==307066== Process terminating with default action of signal 11 (SIGSEGV)
+==307066==  Access not within mapped region at address 0x1FFE801FF8
+==307066== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==307066==    at 0x10A364: apagaNo (in /home/p10508/a.out)
+==307066==  If you believe this happened as a result of a stack
+==307066==  overflow in your program's main thread (unlikely but
+==307066==  possible), you can try to increase the size of the
+==307066==  main thread stack using the --main-stacksize= flag.
+==307066==  The main thread stack size used in this run was 8388608.
+==307066== 
+==307066== HEAP SUMMARY:
+==307066==     in use at exit: 67,236 bytes in 4,060 blocks
+==307066==   total heap usage: 5,010 allocs, 950 frees, 88,336 bytes allocated
+==307066== 
+==307066== 1,476 bytes in 369 blocks are definitely lost in loss record 6 of 15
+==307066==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==307066==    by 0x10975F: iQDB (in /home/p10508/a.out)
+==307066==    by 0x109376: main (in /home/p10508/a.out)
+==307066== 
+==307066== 19,188 (32 direct, 19,156 indirect) bytes in 1 blocks are definitely lost in loss record 14 of 15
+==307066==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==307066==    by 0x109B53: iBST (in /home/p10508/a.out)
+==307066==    by 0x10979E: iQDB (in /home/p10508/a.out)
+==307066==    by 0x109376: main (in /home/p10508/a.out)
+==307066== 
+==307066== LEAK SUMMARY:
+==307066==    definitely lost: 1,508 bytes in 370 blocks
+==307066==    indirectly lost: 19,156 bytes in 1,106 blocks
+==307066==      possibly lost: 0 bytes in 0 blocks
+==307066==    still reachable: 46,572 bytes in 2,584 blocks
+==307066==         suppressed: 0 bytes in 0 blocks
+==307066== Reachable blocks (those to which a pointer was found) are not shown.
+==307066== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==307066== 
+==307066== For lists of detected and suppressed errors, rerun with: -s
+==307066== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+#### ####
+      *** Lançando main de verificação 2 ***
+     OK: GerarExecutavel
+#### ####
+/home/p10508/vpl_evaluate.sh: line 107: 317087 Segmentation fault      (core dumped) /usr/bin/valgrind --leak-check=full ./a.out < $1 > valgrind.out 2> valgrind.error
+     FALHA: ExecutarValgrind
+==317087== Memcheck, a memory error detector
+==317087== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==317087== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==317087== Command: ./a.out
+==317087== 
+sQDB: Invalid input pointers.
+sQDB: Invalid input pointers.
+rQDB: p or new is NULL.
+rQDB: p or new is NULL.
+rQDB: p or new is NULL.
+rQDB: p or new is NULL.
+==317087== Invalid read of size 4
+==317087==    at 0x1092EC: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A6A3: orderPath (in /home/p10508/a.out)
+==317087==    by 0x109F27: prQDB (in /home/p10508/a.out)
+==317087==  Address 0x514d188 is 24 bytes inside a block of size 108 free'd
+==317087==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x109769: main (in /home/p10508/a.out)
+==317087==  Block was alloc'd at
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x1096DD: main (in /home/p10508/a.out)
+==317087== 
+==317087== Conditional jump or move depends on uninitialised value(s)
+==317087==    at 0x484ED19: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x48E1D30: __vfprintf_internal (vfprintf-internal.c:1517)
+==317087==    by 0x48CB79E: printf (printf.c:33)
+==317087==    by 0x109317: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087== 
+==317087== Conditional jump or move depends on uninitialised value(s)
+==317087==    at 0x484ED28: strlen (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x48E1D30: __vfprintf_internal (vfprintf-internal.c:1517)
+==317087==    by 0x48CB79E: printf (printf.c:33)
+==317087==    by 0x109317: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087== 
+==317087== Invalid read of size 4
+==317087==    at 0x1092EC: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==  Address 0x50304c8 is 24 bytes inside a block of size 108 free'd
+==317087==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x109769: main (in /home/p10508/a.out)
+==317087==  Block was alloc'd at
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x1096DD: main (in /home/p10508/a.out)
+==317087== 
+==317087== Invalid read of size 4
+==317087==    at 0x1092EC: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A6A3: orderPath (in /home/p10508/a.out)
+==317087==  Address 0x4d17138 is 24 bytes inside a block of size 108 free'd
+==317087==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x109769: main (in /home/p10508/a.out)
+==317087==  Block was alloc'd at
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x1096DD: main (in /home/p10508/a.out)
+==317087== 
+==317087== Invalid read of size 4
+==317087==    at 0x1092EC: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==  Address 0x51379c8 is 24 bytes inside a block of size 108 free'd
+==317087==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x109769: main (in /home/p10508/a.out)
+==317087==  Block was alloc'd at
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x1096DD: main (in /home/p10508/a.out)
+==317087== 
+==317087== Syscall param write(buf) points to uninitialised byte(s)
+==317087==    at 0x497F887: write (write.c:26)
+==317087==    by 0x48F5EEC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1180)
+==317087==    by 0x48F79E0: new_do_write (fileops.c:448)
+==317087==    by 0x48F79E0: _IO_new_do_write (fileops.c:425)
+==317087==    by 0x48F79E0: _IO_do_write@@GLIBC_2.2.5 (fileops.c:422)
+==317087==    by 0x48F66D4: _IO_new_file_xsputn (fileops.c:1243)
+==317087==    by 0x48F66D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==317087==    by 0x48E0CA8: outstring_func (vfprintf-internal.c:239)
+==317087==    by 0x48E0CA8: __vfprintf_internal (vfprintf-internal.c:1516)
+==317087==    by 0x48CB79E: printf (printf.c:33)
+==317087==    by 0x109317: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==  Address 0x4a972fd is 701 bytes inside a block of size 4,096 alloc'd
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x48E9BA3: _IO_file_doallocate (filedoalloc.c:101)
+==317087==    by 0x48F8CDF: _IO_doallocbuf (genops.c:347)
+==317087==    by 0x48F7F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+==317087==    by 0x48F66D4: _IO_new_file_xsputn (fileops.c:1243)
+==317087==    by 0x48F66D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==317087==    by 0x48EBF1B: puts (ioputs.c:40)
+==317087==    by 0x1093EA: main (in /home/p10508/a.out)
+==317087== 
+==317087== Invalid read of size 4
+==317087==    at 0x1092EC: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A76E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A6A3: orderPath (in /home/p10508/a.out)
+==317087==    by 0x109F27: prQDB (in /home/p10508/a.out)
+==317087==    by 0x10979A: main (in /home/p10508/a.out)
+==317087==  Address 0x4a99ef8 is 24 bytes inside a block of size 108 free'd
+==317087==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x109769: main (in /home/p10508/a.out)
+==317087==  Block was alloc'd at
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x1096DD: main (in /home/p10508/a.out)
+==317087== 
+==317087== Invalid read of size 4
+==317087==    at 0x1092EC: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A6A3: orderPath (in /home/p10508/a.out)
+==317087==    by 0x109F27: prQDB (in /home/p10508/a.out)
+==317087==    by 0x10979A: main (in /home/p10508/a.out)
+==317087==  Address 0x4a99978 is 24 bytes inside a block of size 108 free'd
+==317087==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x109769: main (in /home/p10508/a.out)
+==317087==  Block was alloc'd at
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x1096DD: main (in /home/p10508/a.out)
+==317087== 
+==317087== Invalid read of size 4
+==317087==    at 0x1092EC: printAlu (in /home/p10508/a.out)
+==317087==    by 0x10A77E: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A795: percorreEmOrdem (in /home/p10508/a.out)
+==317087==    by 0x10A6A3: orderPath (in /home/p10508/a.out)
+==317087==    by 0x109F27: prQDB (in /home/p10508/a.out)
+==317087==    by 0x10979A: main (in /home/p10508/a.out)
+==317087==  Address 0x4a99c38 is 24 bytes inside a block of size 108 free'd
+==317087==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x109769: main (in /home/p10508/a.out)
+==317087==  Block was alloc'd at
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x1096DD: main (in /home/p10508/a.out)
+==317087== 
+==317087== Conditional jump or move depends on uninitialised value(s)
+==317087==    at 0x109DE9: rQDB (in /home/p10508/a.out)
+==317087==    by 0x109B7F: dQDB (in /home/p10508/a.out)
+==317087== 
+rQDB: p or new is NULL.
+==317087== Use of uninitialised value of size 8
+==317087==    at 0x109FDB: dBST (in /home/p10508/a.out)
+==317087==    by 0x109B96: dQDB (in /home/p10508/a.out)
+==317087== 
+==317087== Invalid read of size 8
+==317087==    at 0x109FDB: dBST (in /home/p10508/a.out)
+==317087==    by 0x109B96: dQDB (in /home/p10508/a.out)
+==317087==  Address 0x8 is not stack'd, malloc'd or (recently) free'd
+==317087== 
+==317087== 
+==317087== Process terminating with default action of signal 11 (SIGSEGV)
+==317087==  Access not within mapped region at address 0x8
+==317087==    at 0x109FDB: dBST (in /home/p10508/a.out)
+==317087==    by 0x109B96: dQDB (in /home/p10508/a.out)
+==317087==  If you believe this happened as a result of a stack
+==317087==  overflow in your program's main thread (unlikely but
+==317087==  possible), you can try to increase the size of the
+==317087==  main thread stack using the --main-stacksize= flag.
+==317087==  The main thread stack size used in this run was 8388608.
+==317087== 
+==317087== HEAP SUMMARY:
+==317087==     in use at exit: 1,847,152 bytes in 49,975 blocks
+==317087==   total heap usage: 60,014 allocs, 10,039 frees, 2,929,584 bytes allocated
+==317087== 
+==317087== 1,838,960 (24 direct, 1,838,936 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 10
+==317087==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==317087==    by 0x109A7D: cQDB (in /home/p10508/a.out)
+==317087==    by 0x109650: main (in /home/p10508/a.out)
+==317087== 
+==317087== LEAK SUMMARY:
+==317087==    definitely lost: 24 bytes in 1 blocks
+==317087==    indirectly lost: 1,838,936 bytes in 49,972 blocks
+==317087==      possibly lost: 0 bytes in 0 blocks
+==317087==    still reachable: 8,192 bytes in 2 blocks
+==317087==         suppressed: 0 bytes in 0 blocks
+==317087== Reachable blocks (those to which a pointer was found) are not shown.
+==317087== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==317087== 
+==317087== Use --track-origins=yes to see where uninitialised values come from
+==317087== For lists of detected and suppressed errors, rerun with: -s
+==317087== ERROR SUMMARY: 79871 errors from 14 contexts (suppressed: 0 from 0)
+#### ####
+
+O que devo fazer? Onde pode ser que o free esteja faltando? Como evitar as leituras inválidas? A parte dos dados pode ser qualquer coisa

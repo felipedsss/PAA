@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Definição da estrutura do nó da árvore
+typedef struct Node {
+    int sizeData;
+    void *dados;
+    struct Node *esquerda;
+    struct Node *direita;
+} Node;
+
+// Definição da estrutura da árvore binária de busca (BST)
+typedef struct BST {
+    Node *raiz;
+    int sizedata;
+} BST;
