@@ -1,0 +1,2 @@
+
+bool verificarPalindromo(char *str);
