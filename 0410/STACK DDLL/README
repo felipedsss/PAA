@@ -1,0 +1,109 @@
+Implementação de uma Pilha Dinâmica utilizando DDLL
+
+O objetivo deste exercício é desenvolver uma biblioteca em C para manipulação de uma Pilha Dinâmica, utilizando a estrutura de dados de uma Lista Duplamente Encadeada Dinâmica (DDLL) fornecida pelo sistema. Para isso, será necessário modelar a pilha como um ponteiro para o descritor da DDLL, restringindo o acesso à lógica de uso da pilha através de funções específicas. A interface pública da ddlllib.o já foi incluída no Stack_DDLL_pri.h, habilitando a 'conexão' da biblioteca DDLL a Stack_DDLL.
+
+A biblioteca DDLL disponibiliza as seguintes funções:
+
+Funções da Biblioteca DDLL (fornecidas pelo sistema)
+
+int cDDLL(ppDDLL pp, int sizedata);: Função para criar uma DDLL.
+int dDDLL(ppDDLL pp);: Função para destruir uma DDLL.
+int cleanDDLL(pDDLL p);: Função para limpar todos os elementos de uma DDLL.
+int iBegin(pDDLL p, void *element);: Função para inserir um elemento no início de uma DDLL.
+int iEnd(pDDLL p, void *element);: Função para inserir um elemento no final de uma DDLL.
+int iPosition(pDDLL p, int N, void *element);: Função para inserir um elemento em uma posição específica de uma DDLL.
+int rBegin(pDDLL p, void *element);: Função para remover o primeiro elemento de uma DDLL.
+int rEnd(pDDLL p, void *element);: Função para remover o último elemento de uma DDLL.
+int rPosition(pDDLL p, int N, void *element);: Função para remover o elemento de uma posição específica de uma DDLL.
+int sBegin(pDDLL p, void *element);: Função para buscar o primeiro elemento de uma DDLL.
+int sEnd(pDDLL p, void *element);: Função para buscar o último elemento de uma DDLL.
+int sPosition(pDDLL p, int N, void *element);: Função para buscar o elemento em uma posição específica de uma DDLL.
+int empty(pDDLL p);: Função para verificar se uma DDLL está vazia.
+int countElements(pDDLL p);: Função para contar os elementos de uma DDLL.
+A biblioteca Stack_DDLL irá conter as seguintes funções:
+
+Funções da Biblioteca Stack_DDLL
+int stack(ppStack pp, int sizedata);: Função para criar uma pilha dinâmica.
+
+int unstack(ppStack pp);: Função para destruir uma pilha dinâmica.
+
+int push(pStack p, void *element);: Função para inserir um elemento no topo da pilha.
+
+int pop(pStack p, void *element);: Função para remover o elemento do topo da pilha e recuperá-lo.
+
+int cleanStack(pStack p);: Função para limpar todos os elementos da pilha.
+
+int top(pStack p, void *top);: Função para recuperar o elemento do topo da pilha sem removê-lo.
+
+Instruções
+Implemente as funções da biblioteca Stack_DDLL utilizando as funções fornecidas pela biblioteca ddlllib.o para manipulação da DDLL.
+Garanta que as operações de inserção (push) e remoção (pop) na pilha sejam realizadas corretamente, respeitando a lógica de uma pilha (LIFO - Last In, First Out).
+Teste sua implementação utilizando casos de teste variados para garantir que as operações da pilha estão funcionando conforme o esperado.
+
+Arquivos requeridos
+Stack_DDLL.c
+Stack_DDLL_pri.h
+Stack_DDLL_pub.h
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SUCESS 0
+#define FAIL 1
+
+/* TDAPilha_publico.h */
+
+typedef struct Stack *pStack, **ppStack;
+
+int stack(ppStack pp, int sizedata);
+int unstack(ppStack pp);
+
+int push(pStack p, void *element);
+int pop(pStack p, void *element);
+
+int cleanStack(pStack p);
+int top(pStack p, void *top);
+main.c
+/* Arquivo EXEMPLO DE Aplicacao */
+// MODIFIQUEM-o, CORRIJAM-o!
+#include "main.h"
+
+int main(int argc, char *argv[]) {
+    
+    pStack P = NULL;
+    int ret=0;
+    int valor=0;
+    int *arg;
+    int rlines=0;
+
+    if (!fscanf(stdin, "%i", &rlines)) {
+        return 1;
+    }
+
+    arg = (int*) malloc(sizeof(int)*(rlines));
+  
+    ret = stack(&P,sizeof(int));
+
+    for (int i=0; i<rlines;i++) {
+        if (!fscanf(stdin, "%i", &arg[i])) {
+            return 1;
+        }
+        ret = push(P,&arg[i]);
+    }
+
+    ret = top(P,&valor);
+
+    for (int i=0; i<rlines;i++) {
+        ret = pop(P,&valor);
+    }
+
+    ret = unstack(&P);
+  
+    return 0;
+}
+
+
+
+main.h
+#include "Stack_DDLL_pub.h"
+#include <stdio.h>
+#include <stdlib.h>

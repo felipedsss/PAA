@@ -1,0 +1,30 @@
+Objetivo: O objetivo deste exercício é implementar uma biblioteca em C para modelar uma pilha genérica. A pilha deve ser capaz de armazenar elementos de qualquer tipo de dado, utilizando ponteiros void*. A implementação da pilha deve ser dividida em duas partes: uma parte pública, acessível aos usuários da pilha, e uma parte privada, contendo as estruturas de dados e funções internas da pilha que não devem ser acessadas diretamente pelo usuário.
+
+Instruções:
+
+    Implemente a biblioteca de pilha genérica conforme as especificações fornecidas.
+    A biblioteca deve ser dividida em três arquivos:
+        stack.c: Contém a implementação das funções da pilha.
+        stack_pub.h: Contém as definições das funções públicas da pilha.
+        stack_priv.h: Contém as definições das estruturas de dados e funções privadas da pilha.
+    Utilize as seguintes assinaturas de função para as operações da pilha:
+        int stack(ppStack pp, int size, int sizedata)
+        int unstack(ppStack pp)
+        int push(pStack p, void *element)
+        int pop(pStack p, void *element)
+        int cleanStack(pStack p)
+        int top(pStack p, void *top)
+    Crie um exemplo de aplicação (main.c e main.h) para demonstrar o uso da biblioteca de pilha genérica.
+    No exemplo de aplicação, demonstre como criar uma pilha, empilhar e desempilhar elementos de diferentes tipos de dados.
+    Certifique-se de que a biblioteca e o exemplo de aplicação estejam compilando corretamente.
+
+Observações:
+
+    A pilha deve ser capaz de acomodar um número máximo de elementos especificado pelo usuário durante a sua inicialização.
+    O tamanho de cada elemento da pilha também deve ser especificado pelo usuário durante a inicialização.
+    Ao implementar as funções, verifique a integridade da pilha, tratando casos de pilha cheia, pilha vazia e outros erros possíveis.
+    Utilize ponteiros duplos (ppStack) para manipular a pilha, garantindo que as alterações feitas nas funções sejam refletidas fora delas.
+    Teste exaustivamente sua implementação, garantindo que todas as operações da pilha estejam funcionando corretamente e que não haja vazamento de memória ou comportamentos inesperados.
+    O módulo avaliar irá verificar vazamento de memória com o valgrind.
+
+Entrega: Envie os três arquivos da biblioteca (stack.c, stack_pub.h, stack_priv.h) e os arquivos de exemplo de aplicação (main.c, main.h), além de um arquivo de texto contendo qualquer informação adicional que considere relevante para avaliação.

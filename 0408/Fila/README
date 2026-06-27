@@ -1,0 +1,44 @@
+Modelagem de uma fila estática circular genérica em C
+
+Descrição: Neste exercício, você será responsável por implementar uma biblioteca em C para modelar uma Fila Estática Circular (FEC) genérica. A fila será capaz de armazenar elementos de qualquer tipo de dados, e as operações básicas de uma fila, como enfeirar, desenfileirar e obtenção do tamanho, serão implementadas.
+
+Instruções:
+
+    Implemente uma biblioteca chamada Queue que consiste em três arquivos: queue.c, queue_pub.h e queue_priv.h.
+
+O arquivo queue_pub.h deve conter as declarações de todas as funções públicas da fila, bem como o typedef dos ponteirios da estrutura de dados da fila. As funções públicas devem incluir as seguintes assinaturas:
+
+    int cQueue(ppQueue pf, int size, int sizedata);
+    int dQueue(ppQueue pf);
+    int queue(pQueue f, void *element);
+    int unqueue(pQueue f, void *element);
+    int cleanQueue(pQueue f);
+    int sizeQueue(pQueue f);
+
+
+
+Certifique-se de incluir quaisquer outras declarações necessárias, como estruturas auxiliares ou definições de tipos.
+
+    O arquivo queue_priv.h deve conter declarações adicionais necessárias apenas para o funcionamento interno da biblioteca. Isso pode incluir macros, estruturas auxiliares, ou qualquer outra informação que não deva ser exposta aos usuários da biblioteca.
+
+    O arquivo queue.c deve conter as implementações de todas as funções declaradas nos arquivos queue_pub.h e queue_pri.h.
+
+    Implemente uma aplicação de exemplo em C, composta pelos arquivos main.c e main.h. Esta aplicação deve demonstrar o uso da biblioteca Queue. Certifique-se de incluir exemplos de uso de todas as funções fornecidas pela biblioteca.
+
+Requisitos:
+
+    A fila deve ser implementada como uma fila estática circular, ou seja, os elementos são armazenados em um array com tamanho fixo e quando a fila atinge seu limite, ela começa a reutilizar posições no array.
+    A fila deve ser genérica, ou seja, capaz de armazenar elementos de qualquer tipo de dados.
+    Todas as operações de enfileirar, desenfileirar, limpeza e obtenção do tamanho da fila devem ser implementadas e funcionar corretamente.
+    A aplicação de exemplo deve demonstrar o uso correto de todas as funções fornecidas pela biblioteca Queue.
+    O módulo avaliar irá verificar vazamento de memória com o valgrind.
+
+Entrega: Você deve entregar os seguintes arquivos:
+
+    queue.c
+    queue_pub.h
+    queue_priv.h
+    main.c
+    main.h
+
+Certifique-se de que seu código esteja bem documentado e organizado. Comente qualquer parte do código que possa não ser óbvia para outros leitores. Além disso, teste sua implementação com uma variedade de casos de teste para garantir seu correto funcionamento.

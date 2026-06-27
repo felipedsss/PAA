@@ -1,0 +1,1 @@
+void somaSubconjuntosVoid(void *arr, int tamanhoElemento, int tamanhoTotal);

@@ -1,0 +1,225 @@
+Biblioteca de Lista Duplamente Encadeada em C
+
+
+
+Introdução
+
+Nesta biblioteca, você será responsável por implementar uma estrutura de dados de Lista Dinâmica Duplamente Encadeada (DDLL - Dynamic Doubly Linked List) em linguagem C. Esta estrutura de dados é uma coleção de elementos que cada elemento possui um ponteiro para o próximo e para o elemento anterior na sequência. A biblioteca deve ser capaz de manipular dados genéricos, permitindo a criação, inserção, remoção e busca de elementos.
+
+Funcionalidades da Biblioteca
+
+A biblioteca deve oferecer as seguintes funcionalidades:
+
+Funções de Criação e Destruição
+
+1. int cDDLL(ppDDLL pp, int sizedata) 
+  - Descrição: Cria uma nova lista duplamente encadeada.
+   - Parâmetros:
+     - `pp`: Ponteiro para o ponteiro que aponta para a lista (referência à lista).
+     - `sizedata`: Tamanho dos dados que serão armazenados em cada elemento da lista.
+   - Retorno:
+     - `0` em caso de sucesso.
+     - `1` em caso de falha na alocação de memória.
+
+2. int dDDLL(ppDDLL pp)
+   - Descrição: Destroi a lista duplamente encadeada e libera toda a memória alocada.
+   - Parâmetros:
+     - `pp`: Ponteiro para o ponteiro que aponta para a lista (referência à lista).
+   - Retorno:
+     - `0` em caso de sucesso.
+     - `1` em caso de falha.
+
+3. int cleanDDLL(pDDLL p)
+   - Descrição: Remove todos os elementos da lista, mantendo-a vazia.
+   - Parâmetros:
+     - `p`: Ponteiro para a lista duplamente encadeada.
+   - Retorno:
+     - `0` em caso de sucesso.
+     - `1` em caso de falha.
+
+Funções de Inserção
+
+4. int iBegin(pDDLL p, void *element)
+   - Descrição: Insere um elemento no início da lista.
+   - Parâmetros:
+     - `p`: Ponteiro para a lista duplamente encadeada.
+     - `element`: Ponteiro para os dados do elemento a ser inserido.
+   - Retorno:
+     - `0` em caso de sucesso.     
+     - `1` em caso de falha.
+
+5. int iEnd(pDDLL p, void *element)
+   - Descrição: Insere um elemento no final da lista.
+   - Parâmetros:
+     - `p`: Ponteiro para a lista duplamente encadeada.
+     - `element`: Ponteiro para os dados do elemento a ser inserido.
+   - Retorno:
+     - `0` em caso de sucesso.
+     - `1` em caso de falha.
+
+6. int iPosition(pDDLL p, int N, void *element)
+   - Descrição: Insere um elemento em uma posição específica na lista.
+   - Parâmetros:
+     - `p`: Ponteiro para a lista duplamente encadeada.
+     - `N`: Posição na lista onde o elemento será inserido.
+     - `element`: Ponteiro para os dados do elemento a ser inserido.
+   - Retorno:
+     - `0` em caso de sucesso.
+     - `1` se a posição for inválida.
+
+Funções de Remoção
+
+7. int rBegin(pDDLL p, void *element)
+   - Descrição: Remove o primeiro elemento da lista.
+   - Parâmetros:
+     - `p`: Ponteiro para a lista duplamente encadeada.
+     - `element`: Ponteiro para armazenar os dados do elemento removido.
+   - Retorno:
+     - `0` em caso de sucesso.
+     - `1` em caso de falha.
+
+8. int rEnd(pDDLL p, void *element)
+   - Descrição: Remove o último elemento da lista.
+   - Parâmetros:
+     - `p`: Ponteiro para a lista duplamente encadeada.
+     - `element`: Ponteiro para armazenar os dados do elemento removido.
+   - Retorno:
+     - `0` em caso de sucesso.
+     - `1` em caso de falha.
+
+9. int rPosition(pDDLL p, int N, void *element)
+   - Descrição: Remove o elemento de uma posição específica na lista.
+   - Parâmetros:
+     - `p`: Ponteiro para a lista duplamente encadeada.
+     - `N`: Posição do elemento a ser removido.
+     - `element`: Ponteiro para armazenar os dados do elemento removido.
+   - Retorno:
+     - `0` em caso de sucesso.
+     - `1` se a posição for inválida.
+
+Funções de Busca
+
+10. int sBegin(pDDLL p, void *element)
+    - Descrição: Retorna o primeiro elemento da lista.
+    - Parâmetros:
+      - `p`: Ponteiro para a lista duplamente encadeada.
+      - `element`: Ponteiro para armazenar os dados do elemento encontrado.
+    - Retorno:
+      - `0` em caso de sucesso.
+      - `1` se a lista estiver vazia.
+
+11. int sEnd(pDDLL p, void *element)
+    - Descrição: Retorna o último elemento da lista.
+    - Parâmetros:
+      - `p`: Ponteiro para a lista duplamente encadeada.
+      - `element`: Ponteiro para armazenar os dados do elemento encontrado.
+    - Retorno:
+      - `0` em caso de sucesso.
+      - `1` se a lista estiver vazia.
+
+12. int sPosition(pDDLL p, int N, void *element)  
+    - Descrição: Retorna o elemento de uma posição específica na lista.
+    - Parâmetros:
+      - `p`: Ponteiro para a lista duplamente encadeada.
+      - `N`: Posição do elemento a ser encontrado.
+      - `element`: Ponteiro para armazenar os dados do elemento encontrado.
+    - Retorno:
+      - `0` em caso de sucesso.
+      - `1` se a posição for inválida.
+
+Funções de Utilidade
+
+13. int empty(pDDLL p)
+    - Descrição: Verifica se a lista está vazia.
+    - Parâmetros:
+      - `p`: Ponteiro para a lista duplamente encadeada.
+    - Retorno:
+      - `0` se a lista estiver vazia.
+      - `1` se a lista não estiver vazia.
+
+14. int countElements(pDDLL p)
+    - Descrição: Retorna o número de elementos presentes na lista.
+    - Parâmetros:
+      - `p`: Ponteiro para a lista duplamente encadeada.
+    - Retorno:
+      - O número de elementos presentes na lista.
+
+Certifique-se de testar sua implementação em diferentes cenários para garantir que ela esteja funcionando corretamente e tratando todos os casos de borda de forma apropriada.
+
+Arquivos requeridos
+DDLL.c
+DDLL_pri.h
+DDLL_pub.h
+
+#include <string.h> 
+#define SUCESS 0
+#define FAIL 1
+
+typedef struct DDLL *pDDLL, **ppDDLL;
+
+// Funções básicas de uma DDLL
+int cDDLL(ppDDLL pp, int sizedata);
+int dDDLL(ppDDLL pp);
+int cleanDDLL(pDDLL p);
+
+int iBegin(pDDLL p, void *element);
+int iEnd(pDDLL p, void *element);
+int iPosition(pDDLL p, int N, void *element);
+
+int rBegin(pDDLL p, void *element);
+int rEnd(pDDLL p, void *element);
+int rPosition(pDDLL p, int N, void *element);
+
+int sBegin(pDDLL p, void *element);
+int sEnd(pDDLL p, void *element);
+int sPosition(pDDLL p, int N, void *element);
+
+// Funções adicionais
+int empty(pDDLL p);
+int countElements(pDDLL p);
+main.c
+/* Arquivo EXEMQLO DE AQlicacao */
+// MODIFIQUEM-o, CORRIJAM-o!
+#include "main.h"
+
+int main(int argc, char *argv[]) {
+    
+    pDDLL lista = NULL;
+    int ret=0;
+    int num=0;
+    int *arg;
+    int rlines=0;
+
+    if (!fscanf(stdin, "%i", &rlines)) {
+        return 1;
+    }
+
+    arg = (int*) malloc(sizeof(int)*(rlines));
+  
+	if(cDDLL(&lista, sizeof(int))){
+		printf("    FAIL: Erro ao criar a lista.\n");
+	} else 
+	    printf("    OK : Lista criada com sucesso.\n");
+
+    for (int i=0; i<rlines;i++) {
+        if (!fscanf(stdin, "%i", &arg[i])) {
+            return 1;
+        }
+		if(iEnd(lista, &arg[i]) == SUCESS){
+			printf("    OK :inserido com sucesso(%d).\n",arg[i]);
+		}else{
+			printf(".    FAIL: falha na insercao.\n");
+		}
+    }
+
+	if(dDDLL(&lista) == SUCESS)
+		printf("    OK: Lista destroida com sucesso.\n");
+	else 
+	    printf("    FAIL: Falha na destruição da lista.\n");
+	   
+    return 0;
+}
+main.h
+#include "DDLL_pub.h"
+#include <stdio.h>
+#include <stdlib.h>
